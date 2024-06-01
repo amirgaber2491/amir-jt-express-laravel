@@ -1,34 +1,26 @@
+# Shipping Package With Laravel
+Package shipping / integrate with J&T Express Company For shipping services
 
-# HyperPay Package With Laravel
 
-sample package for laravel applications to integrate with HyperPay
-
-# Hi, I'm Gouda! 👋
-
+# Hi, I'm Amir! 👋
 
 ## 🚀 About Me
-I'm a Tecnical team lead...
-
+I'm a web developer ...
 
 ## Installation
-
 Install with composer
 
 ```bash
-composer require gouda/jt_express_laravel
+composer require amirgaber2491/jt-express
 ```
 
 Add service Providor in config/app.php
 
 ```bash
-\Gouda\JtExpressLaravel\JtExpressServiceProvider::class,
+\Amir\JtExpressLaravel\JtExpressServiceProvider::class,
 ```
 
 
-
-
-
-    
 ## Environment Variables
 
 To run this package, you will need to add the following environment variables to your .env file
@@ -45,12 +37,14 @@ run command:
 ```
 ## How to use ?
 
-### payment without user:
-- this function to make transaction without Model User , just pass following params:
+
+### create order:
+- this function to create order , just pass following params:
 
 ```bash
     $shipping = new JtExpress();
     $shipping->createOrder($data);
+    
     $data = [
         'customerCode'=> 'test102',
         'digest'=> 'sdsd499',
@@ -89,9 +83,91 @@ run command:
 
 ```
 
-This function will return shipping object.
+This function will return object.
+
+
+### checking order:
+- this function to checking order , just pass following params:
+
+```bash
+    $shipping = new JtExpress();
+    $shipping->checkingOrder($command = 1, $serialNumber, $customerCode, $digest);
+        
+    $orderType    = 1;
+    $txlogisticId = 'EGYUAT73577596805';
+    $reason       = 'reason description';
+    $customerCode = 'J0086024194';
+    $digest       = 'U40e5sumorgd3YgZzU61Mw==';
+
+```
+This function will return object.
+
+
+### checking order:
+- this function to checking order , just pass following params:
+
+```bash
+    $shipping = new JtExpress();
+    $shipping->checkingOrder($command = 1, $serialNumber, $customerCode, $digest);
+
+    $command      = 1;
+    $serialNumber = ['EGYUAT81235870018'];
+    $customerCode = 'J0086024138';
+    $digest       = 'wapT8IYOjNeViOL5eZupEg==';
+
+
+```
+
+This function will return object.
+
+
+### cancel order:
+- this function to cancel order , just pass following params:
+
+```bash
+    $shipping = new JtExpress();
+    $shipping->cancelOrder($orderType, $txlogisticId, $reason, $customerCode, $digest);
+
+    $orderType    = 1;
+    $txlogisticId = 'EGYUAT73577596805';
+    $reason       = 'resoun ';
+    $customerCode = 'J0086024194';
+    $digest       = 'U40e5sumorgd3YgZzU61Mw==';
+
+```
+
+This function will return object.
+
+
+### waybill Information:
+- this function to get waybill Information , just pass following params:
+
+```bash
+    $shipping = new JtExpress();
+    $shipping->waybillInformation($digest, $customerCode, $waybillNos);
+
+    $digest       = 'U40e5sumorgd3YgZzU61Mw==';
+    $customerCode = 'J0086024194';
+    $waybillNos   = ['UEG000000313474'];
+```
+
+This function will return object.
+
+
+### logistics Track Inquiry:
+- this function to get logistics Track Inquiry , just pass following params:
+
+```bash
+    $shipping = new JtExpress();
+    $shipping->logisticsTrackInquiry($digest, $billCodes);
+
+    $digest    = 'U40e5sumorgd3YgZzU61Mw==';
+    $billCodes = 'UEG000000190252';
+```
+
+This function will return object.
+
 
 ## Support
-
-For support, email dev.mohamedgouda@gmail.com 
+For support, email mohamm3dameen@gmail.com 
 
