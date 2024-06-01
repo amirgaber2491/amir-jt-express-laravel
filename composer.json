@@ -18,5 +18,12 @@
     },
     "require-dev": {
         "orchestra/testbench": "^7.9"
-    }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Amir\\JtExpressLaravel\\JtExpressServiceProvider"
+            ]
+        }
+    } 
 }
