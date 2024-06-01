@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Gouda\JtExpressLaravel\Models;
+namespace Amir\JtExpressLaravel\Models;
 
 
 use Illuminate\Database\Eloquent\Model;

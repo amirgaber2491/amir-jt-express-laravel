@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Gouda\JtExpressLaravel;
+namespace Amir\JtExpressLaravel;
 
 
 class JtExpress
