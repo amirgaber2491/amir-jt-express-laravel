@@ -1,5 +1,5 @@
 {
-    "name": "amir/amir-jt-express-laravel",
+    "name": "amir-jt-express-laravel",
     "license": "MIT",
     "autoload": {
         "psr-4": {
