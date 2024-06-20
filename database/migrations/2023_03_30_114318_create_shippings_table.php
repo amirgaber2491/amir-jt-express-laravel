@@ -13,7 +13,7 @@ class CreateShippingTable extends Migration
      */
     public function up()
     {
-        Schema::create('shipping', function (Blueprint $table) {
+        Schema::create('shippings', function (Blueprint $table) {
 
             $table->id();
 
@@ -28,6 +28,6 @@ class CreateShippingTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('transactions');
+        Schema::dropIfExists('shippings');
     }
 }

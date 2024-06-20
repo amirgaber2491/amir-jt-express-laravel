@@ -17,7 +17,7 @@ class JtExpress
     public function __construct()
     {
         $this->apiAccount = config('JtExpress.apiAccount');
-        $this->jtExpressUrl = config('JtExpress.jtExpressUrl');
+        $this->jtExpressUrl = config('JtExpress.UrlAddOrder');
         $this->sender = config('JtExpress.sender');
         $this->currency = config('JtExpress.currency');
         $this->platformName = config('JtExpress.platformName');

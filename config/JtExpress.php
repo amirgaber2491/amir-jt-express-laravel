@@ -15,45 +15,36 @@ return [
     ),
 
     // Create order
-    'UrlAddOrder' => env(
-        'JT_EXPRESS_URL',
-        config('JtExpress.URL') . 'order/addOrder' ?? "https://openapi.jtjms-sa.com/openplatformweb/mock/order/addOrder"
-    ),
+    'UrlAddOrder' => env('JT_EXPRESS_URL', "https://openapi.jtjms-sa.com/openplatformweb/mock/order/addOrder"),
 
     // checking order
     'UrlCheckingOrder' => env(
-        'JT_EXPRESS_URL_CHECKING_ORDER',
-        config('JtExpress.URL') . 'order/addOrder' ?? "https://openapi.jtjms-sa.com/openplatformweb/mock/order/getOrders"
+        'JT_EXPRESS_URL_CHECKING_ORDER',"https://openapi.jtjms-sa.com/openplatformweb/mock/order/getOrders"
     ),
 
     // Cancel order
     'UrlCancelOrder' => env(
-        'JT_EXPRESS_URL_CANCEL_ORDER',
-        config('JtExpress.URL') . 'order/addOrder' ?? "https://openapi.jtjms-sa.com/openplatformweb/mock/order/cancelOrder"
+        'JT_EXPRESS_URL_CANCEL_ORDER',"https://openapi.jtjms-sa.com/openplatformweb/mock/order/cancelOrder"
     ),
 
     // Waybill model
     'UrlWaybillModel' => env(
-        'JT_EXPRESS_URL_WAYBILL_MODEL',
-        config('JtExpress.URL') . 'order/addOrder' ?? "https://openapi.jtjms-sa.com/openplatformweb/mock/waybill/printOrder"
+        'JT_EXPRESS_URL_WAYBILL_MODEL', "https://openapi.jtjms-sa.com/openplatformweb/mock/waybill/printOrder"
     ),
 
     // Waybill information
     'UrlWaybillInformation' => env(
-        'JT_EXPRESS_URL_WAYBILL_INFORMATION',
-        config('JtExpress.URL') . 'order/addOrder' ?? "https://openapi.jtjms-sa.com/openplatformweb/mock/waybill/getWaybillInfoo"
+        'JT_EXPRESS_URL_WAYBILL_INFORMATION',"https://openapi.jtjms-sa.com/openplatformweb/mock/waybill/getWaybillInfoo"
     ),
 
     // Logistics track query
     'UrlLogisticsTrackQuery' => env(
-        'JT_EXPRESS_URL_LOGISTICS_TRACK_QUERY',
-        config('JtExpress.URL') . 'order/addOrder' ?? "https://openapi.jtjms-sa.com/openplatformweb/mock/logistics/trace"
+        'JT_EXPRESS_URL_LOGISTICS_TRACK_QUERY', "https://openapi.jtjms-sa.com/openplatformweb/mock/logistics/trace"
     ),
 
     // Logistics track subscription
     'UrlLogisticsTrackSubscription' => env(
-        'JT_EXPRESS_URL_LOGISTICS_TRACK_SUBSCRIPTION',
-        config('JtExpress.URL') . 'order/addOrder' ?? "https://openapi.jtjms-sa.com/openplatformweb/mock/logistics/subscribe"
+        'JT_EXPRESS_URL_LOGISTICS_TRACK_SUBSCRIPTION', "https://openapi.jtjms-sa.com/openplatformweb/mock/logistics/subscribe"
     ),
 
     // Sender Information
